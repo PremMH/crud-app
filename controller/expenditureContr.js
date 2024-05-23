@@ -13,14 +13,12 @@ const addExpenditure = async (req, res) => {
         // Find the user by the provided ID in the clientauth header
         const user = await User.findById(clientAuthId);
 
-        console.log("user details", user)
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
 
         // Add the user's name to the request body
         req.body.name = user.name;
-        console.log('the req bvody', req.body   )
 
         // Create the new invoice
         const item = await Invoice.create(req.body);

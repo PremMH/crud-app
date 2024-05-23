@@ -6,14 +6,15 @@ const {addExpenditure, getExpenditure, getExpenditureById} = require('../control
 
 
 
-router.post('/', addRoute);
+router.post('/addRoute', addRoute);
 
-router.get('/', getRoute);
+router.get('/getRoute', getRoute);
 
 router.post('/addExpenditure', addExpenditure);
 
-router.get('/getExpenditure', getExpenditure)
-router.get('/getExpenditure/:id', getExpenditureById)
+router.get('/getExpenditure', getExpenditure);
+
+router.get('/getExpenditure/:id', getExpenditureById);
 
 
 module.exports = router;

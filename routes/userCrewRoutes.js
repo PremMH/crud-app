@@ -7,9 +7,9 @@ const isAdmin = require('../middleware/role')
 
 router.post('/registerUser', registerUser);
 
-router.get('/:id', auth,  getUser);
+router.get('/:id',  getUser);
 
-router.get('/', auth, getUsers);
+router.get('/', auth,  getUsers);
 
 router.patch('/updateUser/:id', auth,  updateUser);
 
@@ -17,7 +17,7 @@ router.delete('/deleteUser/:id', auth,  deleteUser);
 
 
 // crew routes
-router.post('/registerCrew',  registerCrew);
+router.post('/registerCrew', isAdmin, auth,  registerCrew);
 
 router.post('/updateCrew/:id', auth,  updateCrew);
 

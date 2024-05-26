@@ -1,12 +1,11 @@
-POST http://localhost:3000/api/users
+POST http://localhost:3000/login
 
 Content-Type: application/json
 
 {
-   "name": "Prem Hagaragi",
+   "mobile": "8050830600",
    "password": "prem@1234",
-   "usn": "2gi19cs100",
-   "mobile": 8431470498,
-    "role": "student"
+
 
 }
+

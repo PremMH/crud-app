@@ -20,6 +20,9 @@ app.use(express.urlencoded({ extended: false }));
 // Define /api/users endpoint
 app.use("/api/users", userRoutes);
 
+app.use("/api/crew", userRoutes);
+
+
 // Define /api/bus endpoint
 app.use("/api/bus", busRoutes);
 
